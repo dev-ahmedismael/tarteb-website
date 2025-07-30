@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Tajawal", sans-serif;
+
+}
+@theme {
+  --color-primary: #01b6e9;
+  --color-secondary: #01ffff;
+}
+
+.active {
+  background-color: #01b6e9;
+  color: white;
+}

@@ -1,0 +1,18 @@
+<nav class="px-10 py-3 flex gap-10">
+  <div>
+    <img ngSrc="/images/logo.webp" alt="logo"
+         width="960" height="990" class="w-8 h-8" />
+
+    <p class="text-primary font-bold">ترتيب</p>
+  </div>
+
+  <div class="flex items-center gap-5">
+    @for (page of pages; track page.id) {
+      <a [routerLink] = 'page.route' routerLinkActive="active">
+        <div class="py-2 px-5 h-fit">
+          <p>{{page.title}}</p>
+        </div>
+      </a>
+    }
+  </div>
+</nav>
