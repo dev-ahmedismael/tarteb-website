@@ -1,20 +1,20 @@
-import { definePreset } from '@primeng/themes';
-import Aura from '@primeng/themes/aura';
+import { definePreset } from '@primeuix/themes';
+import Aura from '@primeuix/themes/aura';
 
 export const preset = definePreset(Aura, {
   semantic: {
     primary: {
-      50: '{yellow.50}',
-      100: '{yellow.100}',
-      200: '{yellow.200}',
-      300: '{yellow.300}',
-      400: '{yellow.400}',
-      500: '{yellow.600}',
-      600: '{yellow.700}',
-      700: '{yellow.800}',
-      800: '{yellow.900}',
-      900: '{yellow.900}',
-      950: '{yellow.950}',
+      50: '{sky.50}',
+      100: '{sky.100}',
+      200: '{sky.200}',
+      300: '{sky.300}',
+      400: '{sky.400}',
+      500: '{sky.600}',
+      600: '{sky.700}',
+      700: '{sky.800}',
+      800: '{sky.900}',
+      900: '{sky.900}',
+      950: '{sky.950}',
     },
   },
 });

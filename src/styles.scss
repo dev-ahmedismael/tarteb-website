@@ -1,9 +1,9 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
 
 * {
   scroll-behavior: smooth;
   font-family: "Tajawal", sans-serif;
-
 }
 @theme {
   --color-primary: #01b6e9;
@@ -13,4 +13,25 @@
 .active {
   background-color: #01b6e9;
   color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  outline: 1px solid var(--color-primary);
+  width: 100%;
+  border-radius: 7px;
+  height: 40px;
+  padding: 0 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid var(--color-secondary);
 }

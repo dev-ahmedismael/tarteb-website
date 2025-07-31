@@ -1,1 +1,16 @@
-<p>services works!</p>
+<div class="p-10">
+  <p class="text-primary text-4xl text-center">خدماتنا</p>
+
+  <div class="pt-15 grid grid-cols-1 md:grid-cols-3 gap-10">
+    @for (service of services; track service.id) {
+    <div>
+      <div class="flex justify-center mb-7 text-primary">
+        <i style="font-size: xx-large" [class]="service.icon"></i>
+      </div>
+      <p class="text-xl text-center">
+        {{ service.title }}
+      </p>
+    </div>
+    }
+  </div>
+</div>

@@ -1,1 +1,38 @@
-<p>consultation-booking works!</p>
+<div class="p-10">
+  <p class="text-center text-primary mb-10">نموذج طلب استشارة</p>
+
+  <form
+    class="grid grid-cols-1 md:grid-cols-2 gap-10"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <div>
+      <label>الاسم</label>
+      <input type="text" formControlName="name" />
+    </div>
+    <div>
+      <label>رقم الجوال</label>
+      <input type="text" formControlName="phone" />
+    </div>
+    <div class="md:col-span-2">
+      <label>البريد الإلكتروني</label>
+      <input type="text" formControlName="email" />
+    </div>
+    <div class="md:col-span-2">
+      <label>الموضوع</label>
+      <input type="text" formControlName="subject" />
+    </div>
+    <div class="md:col-span-2">
+      <label>الرسالة</label>
+      <textarea formControlName="message" rows="6"></textarea>
+    </div>
+
+    <button
+      class="md:col-span-2 bg-primary text-white cursor-pointer py-3 rounded"
+      [disabled]="form.invalid"
+    >
+      ارسال
+    </button>
+  </form>
+</div>
+<p-toast></p-toast>
