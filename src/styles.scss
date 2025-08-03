@@ -5,6 +5,11 @@
   scroll-behavior: smooth;
   font-family: "Tajawal", sans-serif;
 }
+body {
+  background-color: black;
+  color: white;
+}
+
 @theme {
   --color-primary: #01b6e9;
   --color-secondary: #01ffff;
