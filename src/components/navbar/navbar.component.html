@@ -1,18 +1,63 @@
-<nav class="px-10 py-3 flex gap-10">
-  <div>
-    <img ngSrc="/images/logo.webp" alt="logo"
-         width="960" height="990" class="w-8 h-8" />
-
+<nav
+  class="px-6 py-4 flex items-center justify-between relative z-50 shadow-md"
+>
+  <!-- Logo -->
+  <div class="flex items-center gap-2">
+    <img
+      ngSrc="/images/logo.webp"
+      alt="logo"
+      width="960"
+      height="990"
+      class="w-8 h-8"
+    />
     <p class="text-primary font-bold">ترتيب</p>
   </div>
 
-  <div class="flex items-center gap-5">
+  <!-- Desktop Menu -->
+  <div class="hidden lg:flex items-center gap-10">
     @for (page of pages; track page.id) {
-      <a [routerLink] = 'page.route' routerLinkActive="active">
-        <div class="py-2 px-5 h-fit">
-          <p>{{page.title}}</p>
-        </div>
-      </a>
+    <a
+      [routerLink]="page.route"
+      routerLinkActive="text-primary font-bold"
+      class="hover:text-primary transition"
+    >
+      {{ page.title }}
+    </a>
+    }
+  </div>
+
+  <!-- Mobile Menu Icon -->
+  <div class="lg:hidden">
+    <button
+      (click)="toggleMenu()"
+      aria-label="Toggle menu"
+      class="cursor-pointer"
+    >
+      <i class="pi pi-bars text-2xl"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div
+    *ngIf="isMenuOpen"
+    class="fixed top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-center gap-6 z-50 transition"
+  >
+    <button
+      (click)="closeMenu()"
+      class="absolute top-4 right-4 text-3xl text-gray-600"
+    >
+      <i class="pi pi-times"></i>
+    </button>
+
+    @for (page of pages; track page.id) {
+    <a
+      [routerLink]="page.route"
+      (click)="closeMenu()"
+      routerLinkActive="text-primary font-bold"
+      class="text-xl hover:text-primary transition"
+    >
+      {{ page.title }}
+    </a>
     }
   </div>
 </nav>

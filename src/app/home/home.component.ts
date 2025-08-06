@@ -4,6 +4,7 @@ import { AboutUsComponent } from '../../components/about-us/about-us.component';
 import { RouterLink } from '@angular/router';
 import { ServicesComponent } from '../services/services.component';
 import { PlansComponent } from './plans/plans.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { PlansComponent } from './plans/plans.component';
     RouterLink,
     ServicesComponent,
     PlansComponent,
+    NgOptimizedImage,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

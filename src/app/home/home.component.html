@@ -2,12 +2,41 @@
 <app-about-us></app-about-us>
 <app-services></app-services>
 <app-plans></app-plans>
-<div class="p-10 grid grid-cols-1 md:grid-cols-2 gap-5">
-  <div>
-    <p>لمزيد من الإستفسارات</p>
+<div class="p-10 flex flex-col justify-center items-center gap-10">
+  <p class="text-xl">تابعنا عبر منصات السوشيال ميديا</p>
+
+  <div class="flex gap-3 justify-center items-center">
+    <a
+      href="https://www.instagram.com/tarteb.2?igsh=bzFzOWc2MWdjNHdj&utm_source=qr"
+      target="_blank"
+    >
+      <img
+        ngSrc="/images/instagram.png"
+        alt="instagram"
+        width="50"
+        height="50"
+        class="w-15 h-15"
+      />
+    </a>
+    <a
+      href="https://www.tiktok.com/@tarteb.2?_t=ZS-8yal14Lonwu&_r=1"
+      target="_blank"
+    >
+      <img
+        ngSrc="/images/tiktok.webp"
+        alt="tiktok"
+        width="50"
+        height="50"
+        class="w-15 h-15"
+      />
+    </a>
   </div>
 
-  <div class="flex justify-center items-center">
+  <div>
+    <p class="text-xl">لمزيد من الإستفسارات</p>
+  </div>
+
+  <div class="flex flex-col justify-center items-center">
     <a routerLink="/contact-us">
       <button class="bg-primary text-white px-5 py-3 rounded cursor-pointer">
         تواصل معنا

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToastModule, Toast } from 'primeng/toast';
+import { Toast } from 'primeng/toast';
 
 import {
   FormBuilder,
